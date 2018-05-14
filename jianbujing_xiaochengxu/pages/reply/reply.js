@@ -92,10 +92,10 @@ Page({
     util.saveFormId(e.detail.formId);
 
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/user/updatereply?openid=' + this.data.commentopenid + "&key=" + this.data.key + "&reply=" + reply,
+      url: 'https://nywc.moontell.cn/jianbujing/api/user/updatereply?openid=' + this.data.commentopenid + "&key=" + this.data.key + "&reply=" + reply,
     })
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/weixin/sendtemplatemessage',
+      url: 'https://nywc.moontell.cn/jianbujing/api/weixin/sendtemplatemessage',
       data: {
         data: {
           "keyword1": {

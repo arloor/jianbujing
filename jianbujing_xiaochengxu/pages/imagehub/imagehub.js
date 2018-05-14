@@ -16,7 +16,7 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/imagelist/selectpublic?largeseconds=' + this.data.largeseconds + "&smallseconds=" + this.data.smallseconds + "&pageSize=" + this.data.pageSize,
+      url: 'https://nywc.moontell.cn/jianbujing/api/imagelist/selectpublic?largeseconds=' + this.data.largeseconds + "&smallseconds=" + this.data.smallseconds + "&pageSize=" + this.data.pageSize,
       method: "post",
       success: function (res) {
         // console.info("select公开图片api调用状态码： " + res.statusCode);

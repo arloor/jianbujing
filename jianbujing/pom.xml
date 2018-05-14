@@ -6,7 +6,6 @@
 	<groupId>com.arloor</groupId>
 	<artifactId>jianbujing</artifactId>
 	<version>0.3.0</version>
-	<packaging>jar</packaging>
 
 	<name>jianbujing</name>
 	<description>翦不惊的小本本——微信小程序后台</description>
@@ -68,13 +67,23 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.2</version>
 		</dependency>
+		<!--war打包方式-->
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>
+		</dependency>
 	</dependencies>
-
+	<!--war打包方式-->
+	<packaging>war</packaging>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>jianbujing</finalName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

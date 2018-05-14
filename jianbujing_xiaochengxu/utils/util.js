@@ -30,7 +30,7 @@ function saveFormId(formId){
     return;
   }
   wx.request({
-    url: 'https://jianbujing.moontell.cn/api/weixin/saveformid',
+    url: 'https://nywc.moontell.cn/jianbujing/api/weixin/saveformid',
     data:data,
     method:"post",
     success:function(res){

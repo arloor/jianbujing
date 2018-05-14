@@ -35,7 +35,7 @@ Page({
     var that = this;
 
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/image/viewdetail',
+      url: 'https://nywc.moontell.cn/jianbujing/api/image/viewdetail',
       data: {
         "key": this.data.key,
         "openId": this.data.openId
@@ -88,11 +88,11 @@ Page({
 
 
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/user/updatecomment?openid=' + this.data.curopenId + "&key=" + this.data.key + "&comment=" + mycomment,
+      url: 'https://nywc.moontell.cn/jianbujing/api/user/updatecomment?openid=' + this.data.curopenId + "&key=" + this.data.key + "&comment=" + mycomment,
     })
     console.log(this.data);
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/weixin/sendtemplatemessage',
+      url: 'https://nywc.moontell.cn/jianbujing/api/weixin/sendtemplatemessage',
       data: {
         data: {
           "keyword1": {

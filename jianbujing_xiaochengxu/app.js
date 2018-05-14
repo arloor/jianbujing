@@ -12,7 +12,7 @@ App({
       success: function (res) {
         if (res.code) {
           wx.request({
-            url: 'https://jianbujing.moontell.cn/api/weixin/openid?js_code=' + res.code,
+            url: 'https://nywc.moontell.cn/jianbujing/api/weixin/openid?js_code=' + res.code,
             method: "get",
             success: function (openIdRes) {
               console.log(openIdRes);
@@ -22,7 +22,8 @@ App({
               if (openIdRes.data.openid != null & openIdRes.data.openid != undefined) {
                 that.globalData.openId = openIdRes.data.openid;
                 console.info("openId： " + that.globalData.openId);
-                
+
+
               } else {
                 console.info("获取用户openId失败");
               }

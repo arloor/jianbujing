@@ -26,7 +26,7 @@ Page({
 
     //更新数据库中的用户信息
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/user/updateuser?openid='+this.data.openId+"&nickname="+this.data.userInfo.nickName,
+      url: 'https://nywc.moontell.cn/jianbujing/api/user/updateuser?openid='+this.data.openId+"&nickname="+this.data.userInfo.nickName,
     })
 
 
@@ -94,7 +94,7 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/user/viewmine?largeseconds=' + this.data.largeseconds + "&smallseconds=" + this.data.smallseconds + "&pageSize=" + this.data.pageSize + "&openid="+this.data.openId,
+      url: 'https://nywc.moontell.cn/jianbujing/api/user/viewmine?largeseconds=' + this.data.largeseconds + "&smallseconds=" + this.data.smallseconds + "&pageSize=" + this.data.pageSize + "&openid="+this.data.openId,
       method: "post",
       success: function (res) {
         // console.info("select我的图片api调用状态码： " + res.statusCode);

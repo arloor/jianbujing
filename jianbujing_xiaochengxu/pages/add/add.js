@@ -6,7 +6,7 @@ const util = require('../../utils/util.js');
 function initQiniu() {
   var options = {
     region: 'NCN', // 华北区
-    uptokenURL: 'https://jianbujing.moontell.cn/api/qiniu/uptoken',
+    uptokenURL: 'https://nywc.moontell.cn/jianbujing/api/qiniu/uptoken',
     domain: 'http://jianbujingimages.moontell.cn',
     shouldUseQiniuFileName: true
   };
@@ -35,7 +35,7 @@ Page({
 
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/image/update',
+      url: 'https://nywc.moontell.cn/jianbujing/api/image/update',
       data: {
         "key": this.data.imageObject.key,
         "openId": app.globalData.openId,
@@ -73,7 +73,7 @@ function didPressChooesImage(that) {
         });
         //调用存储到数据库的api
         wx.request({
-          url: 'https://jianbujing.moontell.cn/api/image/insert',
+          url: 'https://nywc.moontell.cn/jianbujing/api/image/insert',
           data:{
             "key": that.data.imageObject.key,
             "imageURL": that.data.imageObject.imageURL,

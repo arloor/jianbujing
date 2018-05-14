@@ -30,7 +30,7 @@ Page({
     var that = this;
 
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/image/viewdetail',
+      url: 'https://nywc.moontell.cn/jianbujing/api/image/viewdetail',
       data: {
         "key": this.data.key,
         "openId": this.data.openId
@@ -91,7 +91,7 @@ Page({
     console.log("======修改图片信息=====");
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     wx.request({
-      url: 'https://jianbujing.moontell.cn/api/image/update',
+      url: 'https://nywc.moontell.cn/jianbujing/api/image/update',
       data: {
         "key": this.data.key,
         "openId": app.globalData.openId,

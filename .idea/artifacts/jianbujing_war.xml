@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jianbujing:war">
+    <output-path>$PROJECT_DIR$/jianbujing/target</output-path>
+    <root id="archive" name="jianbujing-0.3.0.war">
+      <element id="artifact" artifact-name="jianbujing:war exploded" />
+    </root>
+  </artifact>
+</component>

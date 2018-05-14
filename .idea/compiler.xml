@@ -11,8 +11,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jianbujing" target="9" />
-      <module name="nywc" target="9" />
-      <module name="rabbitmqdemo" target="1.9" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -4,6 +4,8 @@ import com.arloor.jianbujing.utils.TimedRemoveFormIdRunnable;
 import com.arloor.jianbujing.utils.TimedSetWeixinAccessTokenRunnable;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 
 import java.util.concurrent.Executors;
@@ -11,7 +13,17 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
-public class JianbujingApplication {
+public class JianbujingApplication extends SpringBootServletInitializer {
+
+	/**
+	 * 用于war打包
+	 * @param application
+	 * @return
+	 */
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(JianbujingApplication.class);
+	}
 
 	public static void main(String[] args) {
 		ApplicationContext app=SpringApplication.run(JianbujingApplication.class, args);
